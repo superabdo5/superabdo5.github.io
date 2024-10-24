@@ -1,0 +1,94 @@
+/* تنسيق أساسي للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+/* تنسيق المحتوى */
+main {
+    padding: 20px;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* تنسيق شاشة التحميل */
+#loading-screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* تأثير الزووم على الصورة */
+#loading-screen img {
+    width: 150px;
+    height: auto;
+    animation: zoomEffect 2s ease-in-out infinite;
+}
+
+/* تعريف حركة الزووم */
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* إخفاء شاشة التحميل بعد تحميل الموقع */
+body.loaded #loading-screen {
+    display: none;
+}
+
+@font-face {
+    font-family: 'GESSText Medium';
+    src: url('GE-SS-Text-Medium_26.otf') format('truetype');
+    font-weight: bold;
+}
+
+body::before {
+    content: "دا موقع تجريبي";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'GESSText Medium', sans-serif;
+    font-size: 100px;
+    color: rgb(0, 0, 0); /* عشان يكون الخلفية شفافة */
+    z-index: -1;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #020b97; /* لون الخلفية */
+    color: white; /* لون النص */
+    text-align: center; /* النص في المنتصف */
+    padding: 15px; /* مساحة داخلية للفوتر */
+    position: fixed; /* تثبيت الفوتر في أسفل الصفحة */
+    width: 100%; /* عرض الفوتر يغطي الصفحة كلها */
+    bottom: 0; /* تثبيت الفوتر في أسفل الصفحة */
+}

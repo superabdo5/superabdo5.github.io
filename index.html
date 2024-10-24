@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الأول</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <img src="2020.png" alt="Loading Logo">
+    </div>
+    
+    <script>
+        window.addEventListener('load', function () {
+            // انتظار لمدة 3 ثواني قبل إخفاء شاشة التحميل
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 3000); // 3000 ملي ثانية يعني 3 ثواني
+        });
+    </script>
+    
+    <footer>
+        <p>الحقوق مجانية في الاستخدام © 2024</p>
+    </footer>
+    
+    
+</body>
+</html>
